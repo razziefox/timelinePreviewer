@@ -89,7 +89,7 @@ while(running):
 
                     # referenced for loading files
                     # https://www.w3schools.com/python/python_file_open.asp
-                    f = open(f"{timeLine["path"]}/{i['id']}", "r")
+                    f = open(f"{timeLine['path']}/{i['id']}", "r")
 
                     # adds FILE_NAME, contents, and timestamp to entrie as an array
                     # [FILE_NAME, CONTENTS, TIMESTAMP]
@@ -129,13 +129,13 @@ while(running):
 
             # displays entrie in timeLine["files"] as a choice in prompt
             # [CHOICE] FILE_NAME MONTH/DAY/YEAR HOUR:MINUTE AM/PM
-            print(f"[{i}] {timeLine["files"][i][0]} - {date_time.strftime('%m/%d/%Y %I:%M%p')}")
+            print(f"[{i}] {timeLine['files'][i][0]} - {date_time.strftime('%m/%d/%Y %I:%M%p')}")
 
         # displays choice for closing file
-        print(f"[{len(timeLine["files"])}] Close File")
+        print(f"[{len(timeLine['files'])}] Close File")
 
         # displays choice for exiting the program
-        print(f"[{len(timeLine["files"])+1}] Exit")
+        print(f"[{len(timeLine['files'])+1}] Exit")
 
         try:
             # prompts user to enter an int as their choice, saved to the choice variable
